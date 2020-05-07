@@ -9,14 +9,15 @@ int main() {
 
     TSP test;
     std::vector<int> result;
+    ofstream out("output.txt");
+
     if (!test.readGraph("input.txt"))
     {
-        std::cout << "Couldn't read file. Exiting... " << std::endl;
-        return 0;
+        out << "Couldn't read file. Exiting... " << std::endl;
+        out.close();
+        exit(1);
     }
-
-    ofstream out("output.txt");
-///////////////// Running Bruteforce solution ///////////////////
+    ///////////////// Running Bruteforce solution ///////////////////
 
     out << "Brute Force Solution:\n" << endl;
 
@@ -46,5 +47,6 @@ int main() {
 
     out << "DP runtime: " << std::chrono::duration_cast<std::chrono::microseconds >(end - start).count() << " milliseconds.\n" << endl;
 
+    out.close();
     return 0;
 }
