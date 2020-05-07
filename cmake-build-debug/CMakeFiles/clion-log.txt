@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/mnt/d/SMU/Classes/Spring 20/3353-Algorithms/TravelingSalesman"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/SMU/Classes/Spring 20/3353-Algorithms/TravelingSalesman/cmake-build-debug
