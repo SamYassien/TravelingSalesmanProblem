@@ -1,0 +1,36 @@
+Size: 4
+
+Brute force runtime: 53 milliseconds.
+
+DP runtime: 7 milliseconds
+
+---------------------------------
+
+Size: 5
+
+Brute force runtime: 56 milliseconds.
+
+DP runtime: 10 milliseconds.
+
+---------------------------------
+
+Size: 10
+
+Brute force runtime: 113301 milliseconds.
+
+DP runtime: 396 milliseconds.
+
+---------------------------------
+
+Size: 12
+
+Brute force runtime: 13427520 milliseconds. = 0.2
+
+DP runtime: 2065 milliseconds.
+
+---------------------------------
+Size: 13
+
+Brute force runtime: 169015834 milliseconds. = 2.9 minutes
+
+DP runtime: 5380 milliseconds.
