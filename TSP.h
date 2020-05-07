@@ -43,7 +43,7 @@ private:
 public:
     TSP(){}
     ~TSP();
-    void readGraph( const std::string& );
+    bool readGraph( const std::string& );
     int bruteForce(int, std::vector<int>&);
     int DP(int);
     int DP( int, int ,  std::vector<std::vector<int>>& );

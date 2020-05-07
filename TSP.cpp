@@ -9,10 +9,10 @@ TSP::~TSP() {
     delete graph;
 }
 
-void TSP::readGraph( const std::string& FileName) {
+bool TSP::readGraph( const std::string& FileName) {
     std::ifstream in(FileName);
     if (!in) {
-        std::cout << "Couldn't read file. Exiting... " << std::endl;
+        return 0;
     }
     int temp;
     in >> temp ;
@@ -23,6 +23,7 @@ void TSP::readGraph( const std::string& FileName) {
             graph->matrix[i] = temp ;
     }
     in.close();
+    return 1;
 }
 
 int TSP::bruteForce(int s, std::vector<int>& minPath) {

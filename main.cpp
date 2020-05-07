@@ -9,7 +9,11 @@ int main() {
 
     TSP test;
     std::vector<int> result;
-    test.readGraph("input.txt");
+    if (!test.readGraph("input.txt"))
+    {
+        std::cout << "Couldn't read file. Exiting... " << std::endl;
+        return 0;
+    }
 
     ofstream out("output.txt");
 ///////////////// Running Bruteforce solution ///////////////////
