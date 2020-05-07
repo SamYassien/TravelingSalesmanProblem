@@ -18,4 +18,4 @@ endforeach()
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(TravelingSalesman main.cpp TSP.cpp TSP.h)
+add_executable(${EXE_NAME} main.cpp TSP.cpp TSP.h)
