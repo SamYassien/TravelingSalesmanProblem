@@ -33,8 +33,10 @@ int TSP::bruteForce(int s, std::vector<int>& minPath) {
             if (i != source)
                 vertices.push_back(i);
 
+        // This will carry the minimum cost
         int path = INT_MAX;
         std::vector<int> tempPath;
+        // Trying all permutations and saving smallest one
         do {
             int cost = 0;
             int current = source;
@@ -49,7 +51,6 @@ int TSP::bruteForce(int s, std::vector<int>& minPath) {
                 path = cost;
                 minPath = tempPath;
             }
-
             tempPath.clear();
         } while (std::next_permutation(vertices.begin(), vertices.end()));
 
@@ -66,15 +67,16 @@ int TSP::DP(int s) {
 }
 
 int TSP::DP(int ind, int visited, std::vector<std::vector<int>> & dp) {
+    // return source node if all nodes visited
     if(visited == ((1 << size) - 1))
         return graph->matrix[graph->index( ind, 0)];
-
+    // if  a value exists return it
     if(dp[ind][visited] != INT_MAX)
         return dp[ind][visited];
 
     for(int i = 0; i < size ; i++) {
         if (!(visited & (1 << i))) {
-
+            // TSP(x,{y,z}) = min ( { (x,y) + T(y,{z}) } , { (x,z) + T(z,{y}) } )
             int dist = graph->matrix[graph->index(ind, i)] + DP(i, visited | (1 << i), dp);
 
             dp[ind][visited] = std::min(dp[ind][visited], dist);

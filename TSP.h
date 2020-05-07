@@ -20,6 +20,7 @@ struct Graph{
         delete [] matrix;
     }
     int index ( int x, int y ) const {
+        // mapping a 2D presentation to 1D array
         return (x + n * y);
     }
     int getSize() const {
