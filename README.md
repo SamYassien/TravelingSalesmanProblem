@@ -3,9 +3,9 @@
 
 This program reads in a graph as a weight matrix and solves the Traveling Salesman Problem using two solutions:
 
-1) Brute Force (Trivial).
+1) Brute Force (Trivial). O(n!)
 
-2) Dynamic Programming (Non-Trivial).
+2) Dynamic Programming (Non-Trivial). O((n^2)(2^n))
 
 
 Running Instructions:
